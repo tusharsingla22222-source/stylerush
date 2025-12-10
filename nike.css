@@ -1,0 +1,157 @@
+.highlight {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.series-collection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap
+}
+
+.card {
+    background-color: #333;
+    height: 500px;
+    width: 450px;
+    border: 1px solid transparent;
+    margin-block: 20px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.series-card {
+    background: none;
+    transition: all 0.5s;
+}
+
+.series-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+/* Specific Backgrounds */
+.bg-airforce::before {
+    background-image: url('https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/a42a5d53-2f99-4e78-a081-9d07a2d0774a/AIR+FORCE+1+%2707.png');
+}
+.bg-dunks::before {
+    background-image: url('https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/6c2e20d9-a361-40a5-b69f-1d2c083b1747/NIKE+SB+DUNK+LOW+PRO.png');
+    background-color: white;
+}
+.bg-airforce:hover::before {
+    opacity: 0.2;
+}
+.bg-dunks:hover::before {
+    opacity: 0.2;
+}
+.bg-travis::before {
+    background-image: url('https://static.nike.com/a/images/w_1280,q_auto,f_auto/15b77901-eb6e-46a8-8c2e-76beb0b5b42a/air-jordan-1-low-travis-scott-x-fragment-release-date.jpg');
+    background-color: white;
+}
+.bg-travis:hover::before {
+    opacity: 0.2;
+}
+.bg-jordan::before {
+    background-image: url('https://static.nike.com/a/images/w_1280,q_auto,f_auto/ggcoggcqo6npntkd2tmp/womens-air-jordan-i-black-toe-release-date.jpg');
+    background-color: white;
+}
+.bg-jordan:hover::before {
+    opacity: 0.2;
+}
+.bg-offwhite::before {
+    background-image: url('https://crepdogcrew.com/cdn/shop/files/Jordan1RetroHighOff-WhiteUniversityBlue_9e5402c9-89b2-4d12-9298-bdd838da91a4.jpg?v=1755096782&width=2048');
+    background-color: white;
+}
+.bg-offwhite:hover::before {
+    opacity: 0.2;
+}
+.bg-retro4::before {
+    background-image: url('https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/316de1b6-f526-4f5c-8683-af5420a20680/AIR+JORDAN+4+RETRO.png');
+    background-color: white;
+}
+.bg-retro4:hover::before {
+    opacity: 0.2;
+}
+.bg-retro5::before {
+    background-image: url('https://static.nike.com/a/images/w_1280,q_auto,f_auto/b56167d3-98f7-41cd-9c43-17c475b8f032/air-jordan-5-university-blue-dv1310-401-release-date.jpg');
+    background-color: white;
+}
+.bg-retro5:hover::before {
+    opacity: 0.2;
+}
+.bg-shox::before {
+    background-image: url('https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/bff0b915-8287-46c7-b2ab-505bfb0414b2/W+NIKE+SHOX+TL+FADE.png');
+    background-color: white;
+}
+.bg-shox:hover::before {
+    opacity: 0.2;
+}
+.bg-airmax::before {
+    background-image: url('https://static.nike.com/a/images/w_1280,q_auto,f_auto/76e0cfda-4d4d-4cff-acab-4c1188c5765d/air-max-97-metallic-gold-dm0028-700-release-date.jpg');
+    background-color: white;
+}
+.bg-airmax:hover::before {
+    opacity: 0.2;
+}
+.bg-courtvision::before {
+    background-image: url('https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/42259246-5111-4c26-822b-63824c214216/NIKE+AIR+MAX+90+RETRO+PRO+UNIVERSITY+BLUE.png');
+    background-color: white;
+}
+.bg-courtvision:hover::before {
+    opacity: 0.2;
+}
+.series-card h1 {
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    bottom: -230px;
+}
+
+.series-card a {
+    text-decoration: none;
+}
+
+.series-card button {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.series-card:hover button {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.series-card button:hover {
+    background-color: black;
+    color: #fff;
+}
